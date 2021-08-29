@@ -16,6 +16,7 @@ export const get = async (request) => {
 
 // POST /todos.json
 export const post = async (request) => {
+console.log(`post -> request`, request);
 	const response = await api(request, `todos/${request.locals.userid}`, {
 		// because index.svelte posts a FormData object,
 		// request.body is _also_ a (readonly) FormData

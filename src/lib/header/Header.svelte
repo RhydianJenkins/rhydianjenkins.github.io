@@ -1,13 +1,12 @@
 <script>
+	import { dev } from '$app/env';
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import githubLogo from '/static/github-logo.png';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
+		{#if dev}<span>Development build</span>{/if}
 	</div>
 
 	<nav>
@@ -25,7 +24,9 @@
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<a target="blank" href="https://github.com/rhydianjenkins">
+			<img src={githubLogo} alt="GitHub" />
+		</a>
 	</div>
 </header>
 
