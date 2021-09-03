@@ -5,12 +5,12 @@
 <script>
 	import { onMount } from "svelte";
 
-	let response = 'Loading...';
+	let data = 'Loading...';
 
 	onMount(async () => fetch("/api/test")
 		.then(response => response.json())
-		.then(data => {
-			response = data;
+		.then(response => {
+			data = response;
 		}).catch(error => console.error(error)));
 </script>
 
@@ -20,7 +20,8 @@
 
 <section>
 	<h1>Welcome</h1>
-	<p>{JSON.stringify(response)}</p>
+	<p>API response:</p>
+	<pre>{JSON.stringify(data)}</pre>
 </section>
 
 <style>
