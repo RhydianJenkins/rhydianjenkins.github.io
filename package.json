@@ -21,9 +21,10 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.25",
+    "bson": "^4.5.1",
     "cookie": "^0.4.1",
     "dotenv": "^10.0.0",
-    "mongodb": "^4.1.1",
-    "@sveltejs/adapter-netlify": "^1.0.0-next.25"
+    "mongodb": "^4.1.1"
   }
 }
