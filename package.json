@@ -26,6 +26,7 @@
     "cookie": "^0.4.1",
     "dotenv": "^10.0.0",
     "mongodb": "^4.1.1",
+    "mongoose": "^6.0.4",
     "node-gyp": "^8.2.0"
   }
 }
