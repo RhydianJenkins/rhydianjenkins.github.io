@@ -10,7 +10,7 @@
 	onMount(async () => fetch("/api/test")
 		.then(response => response.json())
 		.then(data => {
-			response = data.test;
+			response = data;
 		}).catch(error => console.error(error)));
 </script>
 
@@ -20,7 +20,7 @@
 
 <section>
 	<h1>Welcome</h1>
-	<p>{response}</p>
+	<p>{JSON.stringify(response)}</p>
 </section>
 
 <style>
