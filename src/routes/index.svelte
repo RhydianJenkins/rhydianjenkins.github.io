@@ -7,7 +7,7 @@
 
 	let data = 'Loading...';
 
-	onMount(async () => fetch("/api/test")
+	onMount(async () => fetch("/api/test/Rhydian")
 		.then(response => response.json())
 		.then(response => {
 			data = response;
