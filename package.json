@@ -26,6 +26,7 @@
     "bson-ext": "^4.0.0",
     "cookie": "^0.4.1",
     "dotenv": "^10.0.0",
+    "kerberos": "^1.1.6",
     "mongodb": "^4.1.1",
     "mongoose": "^6.0.4",
     "node-gyp": "^8.2.0"
