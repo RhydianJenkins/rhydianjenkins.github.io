@@ -19,9 +19,7 @@
 </svelte:head>
 
 <section>
-	<h1>Welcome</h1>
-	<p>API response:</p>
-	<pre>{JSON.stringify(data)}</pre>
+	<h1>Rhydian Jenkins</h1>
 </section>
 
 <style lang="scss">
