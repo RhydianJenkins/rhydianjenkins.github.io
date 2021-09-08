@@ -15,17 +15,56 @@
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title></title>
 </svelte:head>
 
+<h1>About Rhydian</h1>
 <div class="content">
-	<h1>About me</h1>
+	<img class="profile-picture" src="/img/face1.jpg" alt="profile"/>
+	<div class="profile-text">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
 </div>
 
-<style>
+<style lang="scss">
+	h1 {
+		margin: var(--column-margin-top) auto 0 auto;
+	}
+
 	.content {
 		width: 100%;
+		display: flex;
 		max-width: var(--column-width);
 		margin: var(--column-margin-top) auto 0 auto;
+
+		.profile-picture {
+			max-width: calc(var(--column-width) * 0.4);
+			object-fit: cover;
+			border-radius: 5px;
+			box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+		}
+
+		.profile-text {
+			padding: 2rem;
+		}
 	}
 </style>
