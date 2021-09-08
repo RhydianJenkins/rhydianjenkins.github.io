@@ -13,7 +13,7 @@ git clone https://github.com/RhydianJenkins/personal-svelte-website.git
 cd personal-svelte-website
 npm i
 ```
-Then, create your own `.env` file0 (there's a `.env.example`).
+Then, create your own `.env` file (there's a `.env.example`).
 
 Finally, run it in dev mode.
 
