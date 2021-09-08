@@ -24,7 +24,7 @@
 	<pre>{JSON.stringify(data)}</pre>
 </section>
 
-<style>
+<style lang="scss">
 	section {
 		display: flex;
 		flex-direction: column;

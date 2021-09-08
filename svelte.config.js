@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-netlify';
 import dotenv from 'dotenv';
+import sveltePreprocess from 'svelte-preprocess';
 
 dotenv.config();
 
@@ -10,7 +11,8 @@ const config = {
 		target: '#svelte',
 		// Svelte requires an adapter for deployment
         adapter: adapter()
-	}
+	},
+	preprocess: sveltePreprocess()
 };
 
 export default config;
