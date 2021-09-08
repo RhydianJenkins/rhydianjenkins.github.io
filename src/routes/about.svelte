@@ -19,9 +19,10 @@
 </svelte:head>
 
 <h1>About Rhydian</h1>
-<div class="content">
-	<img class="profile-picture" src="/img/face1.jpg" alt="profile"/>
-	<div class="profile-text">
+
+<div class="content row">
+	<img class="profile-picture col-lg" src="/img/face1.jpg" alt="profile"/>
+	<div class="profile-text col-lg">
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -47,24 +48,26 @@
 
 <style lang="scss">
 	h1 {
-		margin: var(--column-margin-top) auto 0 auto;
+		text-align: center;
+		padding-top: 2em;
 	}
 
 	.content {
 		width: 100%;
 		display: flex;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
+		justify-content: center;
+		padding: 2em;
 
 		.profile-picture {
 			max-width: calc(var(--column-width) * 0.4);
+			max-height: 500px;
 			object-fit: cover;
 			border-radius: 5px;
 			box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+			margin-bottom: 2em;
 		}
 
 		.profile-text {
-			padding: 2rem;
 		}
 	}
 </style>

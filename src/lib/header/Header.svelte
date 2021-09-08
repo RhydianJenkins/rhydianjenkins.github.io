@@ -5,8 +5,8 @@
 </script>
 
 <header>
-	<div class="corner">
-		{#if dev}<span>Development build</span>{/if}
+	<div class="corner-left">
+		{#if dev}<p alt="Development build">🛠</p>{/if}
 	</div>
 
 	<nav>
@@ -22,7 +22,7 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
+	<div class="corner-right">
 		<a target="blank" href="https://github.com/rhydianjenkins">
 			<img src={githubLogo} alt="GitHub" />
 		</a>
@@ -30,41 +30,45 @@
 </header>
 
 <style lang="scss">
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
 	.corner {
-		width: 3em;
-		height: 3em;
-
-		a {
+		&-left {
 			display: flex;
-			align-items: center;
 			justify-content: center;
-			width: 100%;
-			height: 100%;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 
-		img {
-			width: 2em;
-			height: 2em;
-			object-fit: contain;
+		&-right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 4em;
+			height: 4em;
+
+			img {
+				width: 100%;
+				height: 100%;
+				padding: 0.75em;
+			}
 		}
 	}
 
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		--background: var(--heading-color);
 
 		a {
 			display: flex;
 			height: 100%;
 			align-items: center;
 			padding: 0 1em;
-			color: var(--heading-color);
+			color: var(--text-color-secondary);
 			font-weight: 700;
 			font-size: 0.8rem;
 			text-transform: uppercase;
@@ -72,17 +76,18 @@
 			text-decoration: none;
 			transition: color 0.2s linear;
 		}
+
+		path {
+			fill: var(--background);
+		}
+
+		svg {
+			width: 2em;
+			height: 3em;
+			display: block;
+		}
 	}
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
 
 	ul {
 		position: relative;
@@ -95,22 +100,22 @@
 		list-style: none;
 		background: var(--background);
 		background-size: contain;
-	}
 
-	li {
-		position: relative;
-		height: 100%;
+		li {
+			position: relative;
+			height: 100%;
 
-		&.active::before {
-			--size: 6px;
-			content: '';
-			width: 0;
-			height: 0;
-			position: absolute;
-			top: 0;
-			left: calc(50% - var(--size));
-			border: var(--size) solid transparent;
-			border-top: var(--size) solid var(--accent-color);
+			&.active::before {
+				--size: 6px;
+				content: '';
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 0;
+				left: calc(50% - var(--size));
+				border: var(--size) solid transparent;
+				border-top: var(--size) solid var(--accent-color);
+			}
 		}
 	}
 
