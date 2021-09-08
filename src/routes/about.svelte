@@ -20,9 +20,11 @@
 
 <h1>About Rhydian</h1>
 
-<div class="content row">
-	<img class="profile-picture col-lg" src="/img/face1.jpg" alt="profile"/>
-	<div class="profile-text col-lg">
+<div class="row profile">
+	<div class="col-lg profile__picture">
+		<img src="/img/face1.jpg" alt="profile"/>
+	</div>
+	<div class="col-lg profile__text">
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -49,25 +51,23 @@
 <style lang="scss">
 	h1 {
 		text-align: center;
-		padding-top: 2em;
+		padding: 2em;
 	}
 
-	.content {
-		width: 100%;
+	.profile {
 		display: flex;
-		justify-content: center;
-		padding: 2em;
+		align-items: center;
 
-		.profile-picture {
-			max-width: calc(var(--column-width) * 0.4);
-			max-height: 500px;
-			object-fit: cover;
-			border-radius: 5px;
-			box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
-			margin-bottom: 2em;
-		}
+		&__picture {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 1em;
 
-		.profile-text {
+			img {
+				border-radius: 5px;
+				max-width: calc(var(--column-width) * 0.5);
+				box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+			}
 		}
 	}
 </style>
