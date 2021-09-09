@@ -13,10 +13,10 @@
 <h1>About Rhydian</h1>
 
 <div class="row profile">
-	<div class="col-lg profile__picture">
+	<div class="col-lg-12 col-md-24 profile__picture">
 		<img src="/img/face1.jpg" alt="profile"/>
 	</div>
-	<div class="col-lg profile__text">
+	<div class="col-lg-12 col-md-24 profile__text">
 		<p>
 			Rhydian is a committed and driven Computer Science PhD graduate with an understanding of many programming and computing aspects;
 			with experience working in a group and alone on multiple challenging tasks
@@ -36,6 +36,7 @@
 
 	.profile {
 		display: flex;
+		justify-content: center;
 		align-items: center;
 
 		&__picture {
@@ -44,10 +45,19 @@
 			padding-bottom: 1em;
 
 			img {
-				border-radius: 5px;
+				border-radius: var(--border-radius);
 				max-width: calc(var(--column-width) * 0.5);
 				box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+				border: 1px solid var(--secondary-color);
 			}
+		}
+
+		&__text {
+			padding: 1em;
+			background-color: var(--background-opacity);
+			border-radius: var(--border-radius);
+			border: 1px solid var(--secondary-color);
+			max-width: 50em;
 		}
 	}
 </style>
