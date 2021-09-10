@@ -20,11 +20,11 @@
 		<p>
 			Rhydian is a committed and driven Computer Science PhD graduate with an understanding of many programming and computing aspects;
 			with experience working in a group and alone on multiple challenging tasks
-			using a wide range of languages including the full web stack (JS frameworks, PHP MVC, database development, sql, ...),
-			as well as side passions in Java, Python and C++.
+			using a wide range of languages including the full web stack (JS frameworks, MVC frameworks, database development, devops, ...)
+			as well as passions in Java, Python, and C++.
 		</p>
 
-		<p>Rhydian's PhD was on Topological mapping using a robotic swarm.</p>
+		<p>Rhydian's PhD was on Topological mapping using a robotic swarm, where strong understandings in AI, robotics, distributed systems, and research were developed.</p>
 	</div>
 </div>
 
