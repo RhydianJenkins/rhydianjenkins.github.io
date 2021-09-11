@@ -3,6 +3,9 @@
 </script>
 
 <script>
+	import Fa from 'svelte-fa';
+	import { faCode, faBriefcase, faBook, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 	const layers = [ 0, 1, 2, 3, 4, 5 ];
 	const layerColors = [
 		'#918D8C',
@@ -41,9 +44,9 @@
 
 <div class="waves">
 	{#each layers as layer}
-		<svg class="wave" style="{ waveStyles(layer) }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" shape-rendering="auto">
-			<path fill="{ layerColors[layer] }" d="{ layerPaths[layer] }"/>
-		</svg>
+	<svg class="wave" style="{ waveStyles(layer) }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" shape-rendering="auto">
+		<path fill="{ layerColors[layer] }" d="{ layerPaths[layer] }"/>
+	</svg>
 	{/each}
 
 	<div class="page-cover" style="{ waveStyles(layers.length) }"/>
@@ -52,7 +55,7 @@
 <div class="page-wrapper">
 	<div class="page-body">
 		<section>
-			<h2 class="title">Skills</h2>
+			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faCode}/><h2>Skills</h2></div>
 			<p>
 				Node
 				Javascript
@@ -75,13 +78,14 @@
 		</section>
 
 		<section>
-			<h2 class="title">Experience</h2>
+			<div class="title"><Fa color="var(--accent-color)" size="lg" pull="left" icon={faBriefcase}/><h2>Experience</h2></div>
 			<div class="title--sub">WCBS</div>
-			<p>WCBS is cool and all</p>
+			<div class="title--sub">Aberystywth University</div>
+			<div class="title--sub">Lexis Nexis</div>
 		</section>
 
 		<section>
-			<h2 class="title">Education</h2>
+			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faBook}/><h2>Educatiuon</h2></div>
 			<div>
 				<p>PhD</p>
 				<p>Bsc</p>
@@ -90,14 +94,14 @@
 		</section>
 
 		<section>
-			<h2 class="title">Portfolio</h2>
+			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faFolder}/><h2>Portfolio</h2></div>
 			<div>
 				<p>Some example projects...</p>
 			</div>
 		</section>
 
 		<section>
-			<h2 class="title">Contact</h2>
+			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faEnvelope}/><h2>Contact</h2></div>
 			<div>
 				<p>Phone, email, address</p>
 			</div>
@@ -162,21 +166,32 @@
 			margin-right: 20%;
 			margin-left: 20%;
 
-			.title {
-				color: var(--accent-color);
+			section {
+				margin-bottom: 5em;
 
-				&--sub {
-					font-size: 1em;
-					color: var(--text-color);
+				.title {
+					display: flex;
+					align-items: baseline;
 
-					&::before {
-						content: '';
-						position: relative;
-						display: inline-block;
-						width: .1em;
-    					height: 1em;
-						left: -.5em;
-						background-color: var(--secondary-color);
+					h1,
+					h2 {
+						margin-left: .2em;
+						color: var(--accent-color);
+					}
+
+					&--sub {
+						font-size: 1em;
+						color: var(--text-color);
+
+						&::before {
+							content: '';
+							position: relative;
+							display: inline-block;
+							width: .1em;
+							height: 1em;
+							left: -.5em;
+							background-color: var(--secondary-color);
+						}
 					}
 				}
 			}

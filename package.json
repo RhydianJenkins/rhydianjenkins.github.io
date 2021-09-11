@@ -23,6 +23,7 @@
   "type": "module",
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@lukeed/uuid": "^2.0.0",
     "@sveltejs/adapter-netlify": "^1.0.0-next.25",
     "aws4": "^1.11.0",
@@ -35,6 +36,7 @@
     "mongodb-client-encryption": "^1.2.6",
     "mongoose": "^6.0.4",
     "node-gyp": "^8.2.0",
-    "snappy": "^7.0.3"
+    "snappy": "^7.0.3",
+    "svelte-fa": "^2.3.3"
   }
 }
