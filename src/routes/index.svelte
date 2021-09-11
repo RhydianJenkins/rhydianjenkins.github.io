@@ -24,7 +24,7 @@
 	let y = 0;
 
 	$: waveStyles = layer => {
-		return `z-index: ${layer + 1}; transform: translate(0, ${-y * layer / 3}px);`
+		return `transform: translate(0, ${-y * layer / 5}px);`
 	}
 </script>
 
@@ -42,7 +42,7 @@
 <div class="waves">
 	{#each layers as layer}
 		<svg class="wave" style="{ waveStyles(layer) }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" shape-rendering="auto">
-			<path fill="{ layerColors[layer] }" fill-opacity="1" d="{ layerPaths[layer] }"/>
+			<path fill="{ layerColors[layer] }" d="{ layerPaths[layer] }"/>
 		</svg>
 	{/each}
 
@@ -51,43 +51,58 @@
 
 <div class="page-wrapper">
 	<div class="page-body">
-		<div>
-			<h2>Skills</h2>
-			<div>
-				<p>Stuff</p>
-			</div>
-		</div>
+		<section>
+			<h2 class="title">Skills</h2>
+			<p>
+				Node
+				Javascript
+				JS Frameworks (Vue / Svelte)
+				html
+				sass
+				Java
+				PHP
+				DevOps
+				Docker
+				SQL / DQL / Mongo
+				MVC frameworks - Laravel / Symfony (Doctrine)
+				Agile Methodologies
+				Git / GitHub
+				Unit testing (Jest/JUnit/PHPUnit)
+				C++
+				ROS
+				Latex
+			</p>
+		</section>
 
-		<div>
-			<h2>Experience</h2>
-			<div>
-				<p>WCBS</p>
-			</div>
-			<div>
-				<p>Lexis Nexis</p>
-			</div>
-		</div>
+		<section>
+			<h2 class="title">Experience</h2>
+			<div class="title--sub">WCBS</div>
+			<p>WCBS is cool and all</p>
+		</section>
 
-		<div>
-			<h2>Education</h2>
+		<section>
+			<h2 class="title">Education</h2>
 			<div>
-				<p>Lexis Nexis</p>
+				<p>PhD</p>
+				<p>Bsc</p>
+				<p>A levels</p>
 			</div>
-		</div>
+		</section>
 
-		<div>
-			<h2>Portfolio</h2>
+		<section>
+			<h2 class="title">Portfolio</h2>
 			<div>
 				<p>Some example projects...</p>
 			</div>
-		</div>
+		</section>
 
-		<div>
-			<h2>Contact</h2>
+		<section>
+			<h2 class="title">Contact</h2>
 			<div>
-				<p>Phone, email, ...</p>
+				<p>Phone, email, address</p>
 			</div>
-		</div>
+			<span class="fa fa-github"></span>
+		</section>
 	</div>
 </div>
 
@@ -103,20 +118,25 @@
 
 		p,
 		h1 {
+			position: fixed;
+			width: 100%;
 			color: var(--text-color-secondary);
 			text-align: center;
 		}
 
 		h1 {
-			margin-top: 4em;
+			color: var(--accent-color);
+			top: 150px;
+			font-size: 3.5em;
 		}
 		p {
-			margin-top: 0.5em;
+			top: 225px;
 		}
 	}
 
 	.waves {
 		margin-top: 30vh;
+		height: 70vh;
 
 		.wave {
 			width: 100%;
@@ -125,21 +145,41 @@
 		}
 
 		.page-cover {
-			width: 100%;
+			width: 100hw;
 			height: 100vh;
+			margin-bottom: -100%;
 			background-color: var(--primary-color);
 		}
 	}
 
 	.page-wrapper {
 		position: absolute;
+		background-color: var(--primary-color);
 		top: 60vh;
 		width: 100%;
-		height: 100vh;
 
 		.page-body {
 			margin-right: 20%;
 			margin-left: 20%;
+
+			.title {
+				color: var(--accent-color);
+
+				&--sub {
+					font-size: 1em;
+					color: var(--text-color);
+
+					&::before {
+						content: '';
+						position: relative;
+						display: inline-block;
+						width: .1em;
+    					height: 1em;
+						left: -.5em;
+						background-color: var(--secondary-color);
+					}
+				}
+			}
 		}
 	}
 </style>

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title></title>
+	<title>About</title>
 </svelte:head>
 
 <h1>About Rhydian</h1>
