@@ -1,11 +1,10 @@
 <script context="module">
 	export const prerender = true;
+	import Fa from 'svelte-fa';
+	import { faCode, faBriefcase, faBook, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <script>
-	import Fa from 'svelte-fa';
-	import { faCode, faBriefcase, faBook, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
 	const layers = [ 0, 1, 2, 3, 4, 5 ];
 	const layerColors = [
 		'#918D8C',
@@ -85,7 +84,7 @@
 		</section>
 
 		<section>
-			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faBook}/><h2>Educatiuon</h2></div>
+			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faBook}/><h2>Education</h2></div>
 			<div>
 				<p>PhD</p>
 				<p>Bsc</p>
