@@ -5,9 +5,11 @@
 </script>
 
 <header>
-	<div class="corner-left">
-		{#if dev}<p alt="Development build">🛠</p>{/if}
-	</div>
+	{#if dev}
+		<div class="corner-left">
+			<p alt="Development build">🛠</p>
+		</div>
+	{/if}
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -21,12 +23,6 @@
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
 	</nav>
-
-	<div class="corner-right">
-		<a target="blank" href="https://github.com/rhydianjenkins">
-			<img src={githubLogo} alt="GitHub" />
-		</a>
-	</div>
 </header>
 
 <style lang="scss">
@@ -38,23 +34,6 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-		}
-
-		&-right {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 4em;
-			height: 4em;
-
-			img {
-				width: 100%;
-				height: 100%;
-				padding: 0.75em;
-			}
 		}
 	}
 

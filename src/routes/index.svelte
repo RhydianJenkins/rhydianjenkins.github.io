@@ -51,7 +51,43 @@
 
 <div class="page-wrapper">
 	<div class="page-body">
-		<p>Page content goes here!</p>
+		<div>
+			<h2>Skills</h2>
+			<div>
+				<p>Stuff</p>
+			</div>
+		</div>
+
+		<div>
+			<h2>Experience</h2>
+			<div>
+				<p>WCBS</p>
+			</div>
+			<div>
+				<p>Lexis Nexis</p>
+			</div>
+		</div>
+
+		<div>
+			<h2>Education</h2>
+			<div>
+				<p>Lexis Nexis</p>
+			</div>
+		</div>
+
+		<div>
+			<h2>Portfolio</h2>
+			<div>
+				<p>Some example projects...</p>
+			</div>
+		</div>
+
+		<div>
+			<h2>Contact</h2>
+			<div>
+				<p>Phone, email, ...</p>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -65,13 +101,17 @@
 		z-index: -1;
 		background-color: var(--secondary-color);
 
+		p,
+		h1 {
+			color: var(--text-color-secondary);
+			text-align: center;
+		}
+
 		h1 {
 			margin-top: 4em;
-			text-align: center;
 		}
 		p {
 			margin-top: 0.5em;
-			text-align: center;
 		}
 	}
 
@@ -95,6 +135,7 @@
 		position: absolute;
 		top: 60vh;
 		width: 100%;
+		height: 100vh;
 
 		.page-body {
 			margin-right: 20%;
