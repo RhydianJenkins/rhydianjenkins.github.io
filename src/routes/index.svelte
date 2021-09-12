@@ -78,9 +78,38 @@
 
 		<section>
 			<div class="title"><Fa color="var(--accent-color)" size="lg" pull="left" icon={faBriefcase}/><h2>Experience</h2></div>
-			<div class="title--sub">WCBS</div>
-			<div class="title--sub">Aberystywth University</div>
-			<div class="title--sub">Lexis Nexis</div>
+			<div class="items">
+				<div class="item">
+					<div class="item-title">Full Stack Web Developer</div>
+					<div class="item-left">
+						<span class="top">WCBS</span>
+						<span class="bottom">2021 - present</span>
+					</div>
+					<p class="item-content">
+						Test test test
+					</p>
+				</div>
+				<div class="item">
+					<div class="item-title">University Tutor</div>
+					<div class="item-left">
+						<span class="top">Abersytwyth University</span>
+						<span class="bottom">2018 - 2021</span>
+					</div>
+					<p class="item-content">
+						Test test test
+					</p>
+				</div>
+				<div class="item">
+					<div class="item-title">PHP Software Engineer</div>
+					<div class="item-left">
+						<span class="top">Lexis Nexis</span>
+						<span class="bottom">2018 (9 months)</span>
+					</div>
+					<p class="item-content">
+						Test test test
+					</p>
+				</div>
+			</div>
 		</section>
 
 		<section>
@@ -143,6 +172,7 @@
 
 		.wave {
 			width: 100%;
+			min-width: 2048px;
 			height: 25vh;
 			margin-top: -20vh;
 		}
@@ -177,19 +207,57 @@
 						margin-left: .2em;
 						color: var(--accent-color);
 					}
+				}
 
-					&--sub {
-						font-size: 1em;
-						color: var(--text-color);
+				.items {
+					border-left: 2px solid var(--secondary-color);
 
-						&::before {
-							content: '';
-							position: relative;
-							display: inline-block;
-							width: .1em;
-							height: 1em;
-							left: -.5em;
-							background-color: var(--secondary-color);
+					.item {
+						position: relative;
+						margin-bottom: 5em;
+						min-height: 5em;
+
+						&-title {
+							display: flex;
+							justify-content: left;
+							align-items: center;
+							font-size: 1em;
+							color: var(--text-color);
+
+							&::before {
+								content: '';
+								position: relative;
+								display: inline-block;
+								width: .75em;
+								height: .75em;
+								left: -.43em;
+								background-color: var(--primary-color);
+								border: 2px solid var(--secondary-color);
+								border-radius: 50%;
+							}
+
+						}
+
+						&-left {
+							position: absolute;
+							display: flex;
+							align-items: center;
+							flex-direction: column;
+							left: -14em;
+							width: 12em;
+							top: -1em;
+							padding: .5em;
+							color: var(--text-color);
+							font-size: .75em;
+							box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+							border-radius: 4px;
+							background-color: var(--background-opacity);
+
+						}
+
+						&-content {
+							margin-left: 2em;
+							font-weight: 100;
 						}
 					}
 				}
