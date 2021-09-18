@@ -2,6 +2,7 @@
 	export const prerender = true;
 	import Fa from 'svelte-fa';
 	import { faCode, faBriefcase, faBook, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+	import githubLogo from '/static/github-logo.png';
 </script>
 
 <script>
@@ -136,6 +137,13 @@
 			<span class="fa fa-github"></span>
 		</section>
 	</div>
+
+	<footer>
+		<p>🔧 Site currently in development 🔨</p>
+		<a class="logo" target="blank" href="https://github.com/rhydianjenkins">
+			<img src={githubLogo} alt="GitHub" />
+		</a>
+	</footer>
 </div>
 
 <style lang="scss">
@@ -167,14 +175,14 @@
 	}
 
 	.waves {
-		margin-top: 30vh;
-		height: 70vh;
+		margin-top: 500px;
+		height: 500px;
+		width: 100%;
 
 		.wave {
 			width: 100%;
-			min-width: 2048px;
-			height: 25vh;
-			margin-top: -20vh;
+			height: 300px;
+			margin-top: -300px;
 		}
 
 		.page-cover {
@@ -188,7 +196,7 @@
 	.page-wrapper {
 		position: absolute;
 		background-color: var(--primary-color);
-		top: 60vh;
+		top: 800px;
 		width: 100%;
 
 		.page-body {
@@ -260,6 +268,27 @@
 							font-weight: 100;
 						}
 					}
+				}
+			}
+		}
+
+		footer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 40px;
+
+			.logo {
+				background-color: var(--text-color);
+				border-radius: 50%;
+				padding: .1em;
+				width: 2em;
+				height: 2em;
+
+				img {
+					width: 100%;
+					height: 100%;
 				}
 			}
 		}
