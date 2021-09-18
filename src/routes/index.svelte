@@ -198,13 +198,22 @@
 		background-color: var(--primary-color);
 		top: 800px;
 		width: 100%;
+		margin: 0 auto;
 
 		.page-body {
-			margin-right: 20%;
-			margin-left: 20%;
-
 			section {
-				margin-bottom: 5em;
+				padding-bottom: 5em;
+				padding-top: 5em;
+				padding-right: 15em;
+				padding-left: 15em;
+
+				@media (max-width: 720px) {
+					padding: 5em;
+				}
+
+				&:nth-child(2n) {
+					background-color: var(--background-opacity);
+				}
 
 				.title {
 					display: flex;
@@ -219,11 +228,17 @@
 
 				.items {
 					border-left: 2px solid var(--secondary-color);
+					margin-top: 5em;
+
+					@media (max-width: 720px) {
+						margin-left: 50%;
+					}
 
 					.item {
 						position: relative;
 						margin-bottom: 5em;
 						min-height: 5em;
+
 
 						&-title {
 							display: flex;
@@ -231,6 +246,7 @@
 							align-items: center;
 							font-size: 1em;
 							color: var(--text-color);
+
 
 							&::before {
 								content: '';
