@@ -152,7 +152,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 50vh;
+		height: 100vh;
 		z-index: -1;
 		background-color: var(--secondary-color);
 
@@ -182,7 +182,7 @@
 		.wave {
 			width: 100%;
 			height: 300px;
-			margin-top: -300px;
+			margin-top: -250px;
 		}
 
 		.page-cover {
