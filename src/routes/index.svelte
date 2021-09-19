@@ -27,7 +27,7 @@
 	let y = 0;
 
 	$: waveStyles = layer => {
-		return `transform: translate(0, ${-y * layer / 5}px);`
+		return `transform: translate(0, ${(layer * 20) + (-y * layer / 5)}px);`
 	}
 </script>
 
@@ -49,7 +49,7 @@
 	</svg>
 	{/each}
 
-	<div class="page-cover" style="{ waveStyles(layers.length) }"/>
+	<div class="page-cover" style="{ waveStyles(layers.length) } height: min({y * 2}px, 110vh)"/>
 </div>
 
 <div class="page-wrapper">
@@ -147,6 +147,9 @@
 </div>
 
 <style lang="scss">
+	$top-title-gap: 40vh;
+	$wave-height: 50vh;
+
 	.splash-container {
 		position: absolute;
 		top: 0;
@@ -166,28 +169,26 @@
 
 		h1 {
 			color: var(--accent-color);
-			top: 150px;
+			top: $top-title-gap;
 			font-size: 3.5em;
 		}
 		p {
-			top: 225px;
+			top: calc(#{$top-title-gap} + 5em);
 		}
 	}
 
 	.waves {
-		margin-top: 500px;
-		height: 500px;
+		margin-top: 100vh;
 		width: 100%;
 
 		.wave {
 			width: 100%;
-			height: 300px;
-			margin-top: -250px;
+			height: $wave-height;
+			margin-top: -$wave-height;
 		}
 
 		.page-cover {
 			width: 100hw;
-			height: 100vh;
 			margin-bottom: -100%;
 			background-color: var(--primary-color);
 		}
@@ -196,7 +197,7 @@
 	.page-wrapper {
 		position: absolute;
 		background-color: var(--primary-color);
-		top: 800px;
+		top: 100vh;
 		width: 100%;
 		margin: 0 auto;
 
