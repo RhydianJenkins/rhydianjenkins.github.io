@@ -3,6 +3,7 @@
 	import Fa from 'svelte-fa';
 	import { faCode, faBriefcase, faBook, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 	import githubLogo from '/static/github-logo.png';
+	import Skills from '$lib/Skills.svelte';
 </script>
 
 <script>
@@ -56,25 +57,7 @@
 	<div class="page-body">
 		<section>
 			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faCode}/><h2>Skills</h2></div>
-			<p>
-				Node
-				Javascript
-				JS Frameworks (Vue / Svelte)
-				html
-				sass
-				Java
-				PHP
-				DevOps
-				Docker
-				SQL / DQL / Mongo
-				MVC frameworks - Laravel / Symfony (Doctrine)
-				Agile Methodologies
-				Git / GitHub
-				Unit testing (Jest/JUnit/PHPUnit)
-				C++
-				ROS
-				Latex
-			</p>
+			<Skills/>
 		</section>
 
 		<section>
