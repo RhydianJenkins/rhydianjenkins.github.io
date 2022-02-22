@@ -1,23 +1,19 @@
 <script>
     const skill_icon_dir = '/img/skill_icons';
     const skills = [
-        { icon: 'placeholder.jpg', text: 'Node' },
-        { icon: 'placeholder.jpg', text: 'Javascript' },
-        { icon: 'placeholder.jpg', text: 'Vue' },
-        { icon: 'placeholder.jpg', text: 'Svelte' },
-        { icon: 'placeholder.jpg', text: 'sass' },
-        { icon: 'placeholder.jpg', text: 'PHP' },
-        { icon: 'placeholder.jpg', text: 'Java' },
-        { icon: 'placeholder.jpg', text: 'DevOps' },
-        { icon: 'placeholder.jpg', text: 'Docker' },
-        { icon: 'placeholder.jpg', text: 'SQL / GraphQL' },
-        { icon: 'placeholder.jpg', text: 'Laravel' },
-        { icon: 'placeholder.jpg', text: 'Symfony / Doctrine' },
-        { icon: 'placeholder.jpg', text: 'Agile Methodologies' },
-        { icon: 'placeholder.jpg', text: 'Git' },
-        { icon: 'placeholder.jpg', text: 'Unit testing' },
-        { icon: 'placeholder.jpg', text: 'C++' },
-        { icon: 'placeholder.jpg', text: 'ROS' },
+        { icon: 'node_logo.png', text: 'Node' },
+        { icon: 'ts_logo.png', text: 'JS/TS' },
+        { icon: 'vue_logo.png', text: 'Vue' },
+        { icon: 'svelte_logo.png', text: 'Svelte' },
+        { icon: 'sass_logo.png', text: 'Sass' },
+        { icon: 'php_logo.png', text: 'PHP' },
+        { icon: 'github_logo.png', text: 'Git' },
+        { icon: 'docker_logo.png', text: 'Docker' },
+        { icon: 'mysql_logo.png', text: 'MySQL' },
+        { icon: 'symfony_logo.png', text: 'Symfony' },
+        { icon: 'cpp_logo.png', text: 'C++' },
+        { icon: 'java_logo.png', text: 'Java' },
+        { icon: 'nginx_logo.png', text: 'NGINX' },
     ];
 </script>
 
@@ -40,24 +36,26 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            width: 7em;
-            height: 7em;
-            padding: .3em;
-            margin: 1em;
-            margin-bottom: 3em;
+            width: 25rem;
+            min-height: 7rem;
+            padding: .3rem;
+            margin: 1rem;
+            margin-bottom: 3rem;
 
-            border-radius: var(--border-radius);
+            border-radius: 15px;
+            border: 5px solid var(--secondary-color);
             background-color: var(--background-opacity);
 
             img {
                 width: 100%;
                 height: 100%;
                 border-radius: var(--border-radius);
+                object-fit: contain;
             }
 
             &-text {
                 color: var(--text-color);
-                margin-top: 0.3em;
+                margin-top: 0.3rem;
             }
         }
     }

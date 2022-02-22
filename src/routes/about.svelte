@@ -31,7 +31,7 @@
 <style lang="scss">
 	h1 {
 		text-align: center;
-		padding: 2em;
+		padding: 2rem;
 	}
 
 	.profile {
@@ -42,7 +42,7 @@
 		&__picture {
 			display: flex;
 			justify-content: center;
-			padding-bottom: 1em;
+			padding-bottom: 1rem;
 
 			img {
 				border-radius: var(--border-radius);
@@ -53,11 +53,11 @@
 		}
 
 		&__text {
-			padding: 1em;
+			padding: 1rem;
 			background-color: var(--background-opacity);
 			border-radius: var(--border-radius);
 			border: 1px solid var(--secondary-color);
-			max-width: 50em;
+			max-width: 50rem;
 		}
 	}
 </style>

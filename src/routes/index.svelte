@@ -56,39 +56,27 @@
 <div class="page-wrapper">
 	<div class="page-body">
 		<section>
-			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faCode}/><h2>Skills</h2></div>
+			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" icon={faCode}/><h2>Skills</h2></div>
 			<Skills/>
 		</section>
 
 		<section>
-			<div class="title"><Fa color="var(--accent-color)" size="lg" pull="left" icon={faBriefcase}/><h2>Experience</h2></div>
+			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" pull="left" icon={faBriefcase}/><h2>Experience</h2></div>
 			<div class="items">
 				<div class="item">
 					<div class="item-title">Full Stack Web Developer</div>
-					<div class="item-left">
-						<span class="top">WCBS</span>
-						<span class="bottom">2021 - present</span>
-					</div>
 					<p class="item-content">
 						Test test test
 					</p>
 				</div>
 				<div class="item">
 					<div class="item-title">University Tutor</div>
-					<div class="item-left">
-						<span class="top">Abersytwyth University</span>
-						<span class="bottom">2018 - 2021</span>
-					</div>
 					<p class="item-content">
 						Test test test
 					</p>
 				</div>
 				<div class="item">
 					<div class="item-title">PHP Software Engineer</div>
-					<div class="item-left">
-						<span class="top">Lexis Nexis</span>
-						<span class="bottom">2018 (9 months)</span>
-					</div>
 					<p class="item-content">
 						Test test test
 					</p>
@@ -97,7 +85,7 @@
 		</section>
 
 		<section>
-			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faBook}/><h2>Education</h2></div>
+			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" icon={faBook}/><h2>Education</h2></div>
 			<div>
 				<p>PhD</p>
 				<p>Bsc</p>
@@ -106,14 +94,14 @@
 		</section>
 
 		<section>
-			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faFolder}/><h2>Portfolio</h2></div>
+			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" icon={faFolder}/><h2>Portfolio</h2></div>
 			<div>
 				<p>Some example projects...</p>
 			</div>
 		</section>
 
 		<section>
-			<div class="title"><Fa color="var(--accent-color)" size="lg" icon={faEnvelope}/><h2>Contact</h2></div>
+			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" icon={faEnvelope}/><h2>Contact</h2></div>
 			<div>
 				<p>Phone, email, address</p>
 			</div>
@@ -130,7 +118,7 @@
 </div>
 
 <style lang="scss">
-	$top-title-gap: 40vh;
+	$top-title-gap: 30vh;
 	$wave-height: 50vh;
 
 	.splash-container {
@@ -153,10 +141,10 @@
 		h1 {
 			color: var(--accent-color);
 			top: $top-title-gap;
-			font-size: 3.5em;
+			font-size: 9rem;
 		}
 		p {
-			top: calc(#{$top-title-gap} + 5em);
+			top: calc(#{$top-title-gap} + 11rem);
 		}
 	}
 
@@ -186,13 +174,13 @@
 
 		.page-body {
 			section {
-				padding-bottom: 5em;
-				padding-top: 5em;
-				padding-right: 15em;
-				padding-left: 15em;
+				padding-bottom: 40rem;
+				padding-top: 40rem;
+				padding-right: min(25%, 100px);
+				padding-left: min(25%, 100px);
 
 				@media (max-width: 720px) {
-					padding: 5em;
+					padding: 5rem;
 				}
 
 				&:nth-child(2n) {
@@ -203,16 +191,15 @@
 					display: flex;
 					align-items: baseline;
 
-					h1,
 					h2 {
-						margin-left: .2em;
+						margin-left: .2rem;
 						color: var(--accent-color);
 					}
 				}
 
 				.items {
 					border-left: 2px solid var(--secondary-color);
-					margin-top: 5em;
+					margin-top: 5rem;
 
 					@media (max-width: 720px) {
 						margin-left: 50%;
@@ -220,52 +207,33 @@
 
 					.item {
 						position: relative;
-						margin-bottom: 5em;
-						min-height: 5em;
-
+						margin-bottom: 5rem;
+						min-height: 5rem;
 
 						&-title {
 							display: flex;
 							justify-content: left;
 							align-items: center;
-							font-size: 1em;
+							font-size: 3rem;
 							color: var(--text-color);
-
 
 							&::before {
 								content: '';
 								position: relative;
 								display: inline-block;
-								width: .75em;
-								height: .75em;
-								left: -.43em;
+								width: 3rem;
+								height: 3rem;
+								left: -1.5rem;
 								background-color: var(--primary-color);
 								border: 2px solid var(--secondary-color);
 								border-radius: 50%;
 							}
-
-						}
-
-						&-left {
-							position: absolute;
-							display: flex;
-							align-items: center;
-							flex-direction: column;
-							left: -14em;
-							width: 12em;
-							top: -1em;
-							padding: .5em;
-							color: var(--text-color);
-							font-size: .75em;
-							box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-							border-radius: 4px;
-							background-color: var(--background-opacity);
-
 						}
 
 						&-content {
-							margin-left: 2em;
+							margin-left: 2rem;
 							font-weight: 100;
+							font-size: 1.5rem;
 						}
 					}
 				}
@@ -281,10 +249,11 @@
 
 			.logo {
 				background-color: var(--text-color);
+				border: 3px solid var(--text-color);
 				border-radius: 50%;
-				padding: .1em;
-				width: 2em;
-				height: 2em;
+				padding: .1rem;
+				width: 8rem;
+				height: 8rem;
 
 				img {
 					width: 100%;
