@@ -118,7 +118,7 @@
 </div>
 
 <style lang="scss">
-	$top-title-gap: 30vh;
+	$top-title-gap: 20rem;
 	$wave-height: 50vh;
 
 	.splash-container {
@@ -144,7 +144,7 @@
 			font-size: 9rem;
 		}
 		p {
-			top: calc(#{$top-title-gap} + 11rem);
+			top: calc(#{$top-title-gap} + 20rem);
 		}
 	}
 
