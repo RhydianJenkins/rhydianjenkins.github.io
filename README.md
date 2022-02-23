@@ -10,8 +10,8 @@ A personal svelte project currently functioning as a playground for learning.
 Clone and install dependencies
 
 ```bash
-git clone https://github.com/RhydianJenkins/personal-svelte-website.git
-cd personal-svelte-website
+git clone https://github.com/RhydianJenkins/rhydianjenkins.github.io
+cd rhydianjenkins.github.io
 npm i
 ```
 Then, create your own `.env` file (there's a `.env.example`).
@@ -21,3 +21,4 @@ Finally, run it in dev mode.
 ```bash
 npm run dev -- --open
 ```
+
