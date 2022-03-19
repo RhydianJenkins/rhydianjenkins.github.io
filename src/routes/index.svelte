@@ -205,47 +205,6 @@
 						color: var(--accent-color);
 					}
 				}
-
-				// .items {
-				// 	border-left: 2px solid var(--secondary-color);
-				// 	margin-top: 5rem;
-
-				// 	@media (max-width: 720px) {
-				// 		margin-left: 50%;
-				// 	}
-
-				// 	.item {
-				// 		position: relative;
-				// 		margin-bottom: 5rem;
-				// 		min-height: 5rem;
-
-				// 		&-title {
-				// 			display: flex;
-				// 			justify-content: left;
-				// 			align-items: center;
-				// 			font-size: 3rem;
-				// 			color: var(--text-color);
-
-				// 			&::before {
-				// 				content: '';
-				// 				position: relative;
-				// 				display: inline-block;
-				// 				width: 3rem;
-				// 				height: 3rem;
-				// 				left: -1.5rem;
-				// 				background-color: var(--primary-color);
-				// 				border: 2px solid var(--secondary-color);
-				// 				border-radius: 50%;
-				// 			}
-				// 		}
-
-				// 		&-content {
-				// 			margin-left: 2rem;
-				// 			font-weight: 100;
-				// 			font-size: 1.5rem;
-				// 		}
-				// 	}
-				// }
 			}
 		}
 
