@@ -1,9 +1,10 @@
 <script context="module">
 	export const prerender = true;
+
 	import Fa from 'svelte-fa';
-	import { faCode, faBriefcase, faBook, faFolder, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-	import githubLogo from '/static/github-logo.png';
+	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import Skills from '$lib/Skills.svelte';
+	import About from '$lib/About.svelte';
 </script>
 
 <script>
@@ -33,14 +34,22 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Rhydian Jenkins</title>
 </svelte:head>
 
 <svelte:window bind:scrollY={y}/>
 
 <div class="splash-container">
-	<h1>Rhydian Jenkins</h1>
-	<p>Full Stack Web Developer</p>
+	<div class="splash">
+		<h1>Rhydian Jenkins</h1>
+		<h2>Full Stack Software Engineer</h2>
+		<ul>
+			<li><a href="mailto:rhydz@msn.com" target="blank">Email</a></li>
+			<li><a href="https://github.com/RhydianJenkins" target="blank">GitHub</a></li>
+			<li><a href="https://github.com/RhydianJenkins/CV/blob/master/cv.pdf" target="blank">CV</a></li>
+			<li><a href="https://www.linkedin.com/in/rhydian-jenkins-30309085" target="blank">LinkedIn</a></li>
+		</ul>
+	</div>
 </div>
 
 <div class="waves">
@@ -56,64 +65,18 @@
 <div class="page-wrapper">
 	<div class="page-body">
 		<section>
+			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" icon={faCode}/><h2>About</h2></div>
+			<About/>
+		</section>
+
+		<section>
 			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" icon={faCode}/><h2>Skills</h2></div>
 			<Skills/>
-		</section>
-
-		<section>
-			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" pull="left" icon={faBriefcase}/><h2>Experience</h2></div>
-			<div class="items">
-				<div class="item">
-					<div class="item-title">Full Stack Web Developer</div>
-					<p class="item-content">
-						Test test test
-					</p>
-				</div>
-				<div class="item">
-					<div class="item-title">University Tutor</div>
-					<p class="item-content">
-						Test test test
-					</p>
-				</div>
-				<div class="item">
-					<div class="item-title">PHP Software Engineer</div>
-					<p class="item-content">
-						Test test test
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" icon={faBook}/><h2>Education</h2></div>
-			<div>
-				<p>PhD</p>
-				<p>Bsc</p>
-				<p>A levels</p>
-			</div>
-		</section>
-
-		<section>
-			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" icon={faFolder}/><h2>Portfolio</h2></div>
-			<div>
-				<p>Some example projects...</p>
-			</div>
-		</section>
-
-		<section>
-			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" size="lg" icon={faEnvelope}/><h2>Contact</h2></div>
-			<div>
-				<p>Phone, email, address</p>
-			</div>
-			<span class="fa fa-github"></span>
 		</section>
 	</div>
 
 	<footer>
 		<p>🔧 Site currently in development 🔨</p>
-		<a class="logo" target="blank" href="https://github.com/rhydianjenkins">
-			<img src={githubLogo} alt="GitHub" />
-		</a>
 	</footer>
 </div>
 
@@ -130,27 +93,76 @@
 		z-index: -1;
 		background-color: var(--secondary-color);
 
-		p,
-		h1 {
-			position: fixed;
-			width: 100%;
-			color: var(--text-color-secondary);
-			text-align: center;
-		}
+		.splash {
+			h1,
+			h2,
+			ul {
+				position: fixed;
+				width: 100%;
+				color: var(--text-color-secondary);
+				text-align: center;
+			}
 
-		h1 {
-			color: var(--accent-color);
-			top: $top-title-gap;
-			font-size: 9rem;
-		}
-		p {
-			top: calc(#{$top-title-gap} + 20rem);
+			h1 {
+				color: var(--accent-color);
+				top: $top-title-gap;
+				font-size: 6rem;
+			}
+
+			h2 {
+				top: calc(#{$top-title-gap} + 16rem);
+				font-size: 4rem;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				font-size: 2rem;
+
+				li {
+					display: inline-block;
+					min-width: 5rem;
+					margin: 0 2rem;
+				}
+
+				a {
+					text-decoration: none;
+					display: block;
+					position: relative;
+					color: var(--text-color-secondary);
+					padding: 1rem 0;
+
+					&:focus,
+					&:hover {
+						color: var(--accent-color);
+
+						&:before {
+							left: 0;
+							width: 100%;
+						}
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 1px;
+						background-color: var(--accent-color);
+						bottom: calc(-1px);
+						right: 0;
+						transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+					}
+				}
+			}
 		}
 	}
 
 	.waves {
 		margin-top: 100vh;
 		width: 100%;
+		pointer-events: none; // so they don't get in the way of links
 
 		.wave {
 			width: 100%;
@@ -174,10 +186,7 @@
 
 		.page-body {
 			section {
-				padding-bottom: 40rem;
-				padding-top: 40rem;
-				padding-right: min(25%, 100px);
-				padding-left: min(25%, 100px);
+				padding: 40rem min(25%, 40rem);
 
 				@media (max-width: 720px) {
 					padding: 5rem;
@@ -197,46 +206,46 @@
 					}
 				}
 
-				.items {
-					border-left: 2px solid var(--secondary-color);
-					margin-top: 5rem;
+				// .items {
+				// 	border-left: 2px solid var(--secondary-color);
+				// 	margin-top: 5rem;
 
-					@media (max-width: 720px) {
-						margin-left: 50%;
-					}
+				// 	@media (max-width: 720px) {
+				// 		margin-left: 50%;
+				// 	}
 
-					.item {
-						position: relative;
-						margin-bottom: 5rem;
-						min-height: 5rem;
+				// 	.item {
+				// 		position: relative;
+				// 		margin-bottom: 5rem;
+				// 		min-height: 5rem;
 
-						&-title {
-							display: flex;
-							justify-content: left;
-							align-items: center;
-							font-size: 3rem;
-							color: var(--text-color);
+				// 		&-title {
+				// 			display: flex;
+				// 			justify-content: left;
+				// 			align-items: center;
+				// 			font-size: 3rem;
+				// 			color: var(--text-color);
 
-							&::before {
-								content: '';
-								position: relative;
-								display: inline-block;
-								width: 3rem;
-								height: 3rem;
-								left: -1.5rem;
-								background-color: var(--primary-color);
-								border: 2px solid var(--secondary-color);
-								border-radius: 50%;
-							}
-						}
+				// 			&::before {
+				// 				content: '';
+				// 				position: relative;
+				// 				display: inline-block;
+				// 				width: 3rem;
+				// 				height: 3rem;
+				// 				left: -1.5rem;
+				// 				background-color: var(--primary-color);
+				// 				border: 2px solid var(--secondary-color);
+				// 				border-radius: 50%;
+				// 			}
+				// 		}
 
-						&-content {
-							margin-left: 2rem;
-							font-weight: 100;
-							font-size: 1.5rem;
-						}
-					}
-				}
+				// 		&-content {
+				// 			margin-left: 2rem;
+				// 			font-weight: 100;
+				// 			font-size: 1.5rem;
+				// 		}
+				// 	}
+				// }
 			}
 		}
 
@@ -246,20 +255,6 @@
 			justify-content: center;
 			align-items: center;
 			padding: 40px;
-
-			.logo {
-				background-color: var(--text-color);
-				border: 3px solid var(--text-color);
-				border-radius: 50%;
-				padding: .1rem;
-				width: 8rem;
-				height: 8rem;
-
-				img {
-					width: 100%;
-					height: 100%;
-				}
-			}
 		}
 	}
 </style>
