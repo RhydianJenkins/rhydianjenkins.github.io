@@ -18,7 +18,7 @@
 
 <div class="skills">
     {#each skills as skill}
-        <div class="skill shadow">
+        <div class="skill">
             <img src="{skill_icon_dir}/{skill.icon}" alt="{ skill.text }"/>
             <div class="progress shadow">
                 <div
@@ -30,6 +30,7 @@
                     aria-valuemax="100"
                 />
             </div>
+            <div class="background-effect"/>
         </div>
     {/each}
 </div>
@@ -41,13 +42,14 @@
         flex-direction: column;
 
         .skill {
-            border: 2px solid var(--background-opacity);
+            // border: 2px solid var(--background-opacity);
             display: flex;
             align-items: center;
             width: 100%;
             padding: 2rem;
             margin-bottom: 1rem;
             border-radius: 0.5rem;
+            transition: all 0.5s ease;
 
             img {
                 width: 5rem;
@@ -65,7 +67,49 @@
                     background-color: var(--accent-color);
                 }
             }
-        }
 
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
+
+                .background-effect {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: var(--background-opacity);
+                    animation: popBackground 0.2s ease;
+                    border-radius: 0.5rem;
+                }
+
+                @keyframes popBackground {
+                    0% {
+                        height: 20%;
+                        border-top-left-radius: 50%;
+                        border-top-right-radius: 50%
+                    }
+
+                    50% {
+                        height: 50%;
+                        border-top-left-radius: 75%;
+                        border-top-right-radius: 75%
+                    }
+
+                    75% {
+                        height: 75%;
+                        border-top-left-radius: 85%;
+                        border-top-right-radius: 85%
+                    }
+
+                    100% {
+                        height: 100%;
+                        border-top-left-radius: 100%;
+                        border-top-right-radius: 100%
+                    }
+                }
+            }
+        }
     }
 </style>
