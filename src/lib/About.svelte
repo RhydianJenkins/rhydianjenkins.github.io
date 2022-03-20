@@ -4,7 +4,7 @@
 
 
 <div class="about">
-    <div class="row mt-5">
+    <div class="row">
         <div class="col-xl-6 col-lg-12 profile-image">
             <img class="profile-image" src="/img/me.jpg" alt="profile"/>
         </div>
@@ -28,10 +28,12 @@
         align-items: center;
 
         img {
-            width: 40rem;
-            max-width: 100%;
+            $imageSize: 40rem;
+            width: $imageSize;
+            height: $imageSize;
             border-radius: 50%;
             border: 5px solid var(--secondary-color);
+            object-fit: cover;
         }
     }
 </style>

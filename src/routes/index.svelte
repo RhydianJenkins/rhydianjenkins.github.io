@@ -2,7 +2,7 @@
 	export const prerender = true;
 
 	import Fa from 'svelte-fa';
-	import { faCode } from '@fortawesome/free-solid-svg-icons';
+	import { faCode, faUser } from '@fortawesome/free-solid-svg-icons';
 	import Skills from '$lib/Skills.svelte';
 	import About from '$lib/About.svelte';
 </script>
@@ -66,17 +66,17 @@
 	<div class="page-body">
 		<section>
 			<div class="container">
-				<div class="title"><Fa class="fa-icon" icon={faCode}/><h2>About</h2></div>
+				<div class="title"><Fa class="fa-user" icon={faUser}/><h2>About</h2></div>
 				<About/>
 			</div>
 		</section>
 
-		<section>
+		<!-- <section>
 			<div class="container">
 				<div class="title"><Fa class="fa-icon" icon={faCode}/><h2>Skills</h2></div>
 				<Skills/>
 			</div>
-		</section>
+		</section> -->
 	</div>
 
 	<footer>
@@ -190,10 +190,11 @@
 
 		.page-body {
 			section {
-				padding-bottom: 20rem;
+				$sectionPadding: 40rem;
+				padding-bottom: $sectionPadding;
 
 				&:not(:first-child) {
-					padding-top: 20rem;
+					padding-top: $sectionPadding;
 				}
 
 				&:nth-child(2n) {
@@ -205,6 +206,7 @@
 					align-items: baseline;
 					font-size: 3rem;
 					color: var(--accent-color);
+					margin-bottom: 2rem;
 
 					h2 {
 						margin-left: 1rem;
