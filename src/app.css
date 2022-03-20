@@ -38,9 +38,9 @@ body::before {
 h1,
 h2,
 p {
-	font-weight: 700;
+	font-weight: 500;
 	color: var(--text-color);
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 a {

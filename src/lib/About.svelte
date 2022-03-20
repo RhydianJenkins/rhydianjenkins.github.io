@@ -4,8 +4,34 @@
 
 
 <div class="about">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="row mt-5">
+        <div class="col-xl-6 col-lg-12 profile-image">
+            <img class="profile-image" src="/img/me.jpg" alt="profile"/>
+        </div>
+        <div class="col-xl-6 col-lg-12">
+            <p class="text-center">
+                Computer Science PhD graduate with an understanding of a variety of software and computing aspects.
+            </p>
+            <p class="text-center">
+                Passionate about learning, and familiar working in Windows and Linux environments,
+                Containers, Virtual Machines and shells. Strives for a principle first approach when learning,
+                combined with a passion to engage in anychallenge with a 'can-do' attitude.
+            </p>
+        </div>
+    </div>
 </div>
 
 <style lang="scss">
+    .profile-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 40rem;
+            max-width: 100%;
+            border-radius: 50%;
+            border: 5px solid var(--secondary-color);
+        }
+    }
 </style>

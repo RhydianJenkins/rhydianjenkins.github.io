@@ -65,13 +65,17 @@
 <div class="page-wrapper">
 	<div class="page-body">
 		<section>
-			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" icon={faCode}/><h2>About</h2></div>
-			<About/>
+			<div class="container">
+				<div class="title"><Fa class="fa-icon" icon={faCode}/><h2>About</h2></div>
+				<About/>
+			</div>
 		</section>
 
 		<section>
-			<div class="title"><Fa class="fa-icon" color="var(--accent-color)" icon={faCode}/><h2>Skills</h2></div>
-			<Skills/>
+			<div class="container">
+				<div class="title"><Fa class="fa-icon" icon={faCode}/><h2>Skills</h2></div>
+				<Skills/>
+			</div>
 		</section>
 	</div>
 
@@ -186,10 +190,10 @@
 
 		.page-body {
 			section {
-				padding: 40rem min(25%, 40rem);
+				padding-bottom: 20rem;
 
-				@media (max-width: 720px) {
-					padding: 5rem;
+				&:not(:first-child) {
+					padding-top: 20rem;
 				}
 
 				&:nth-child(2n) {
@@ -199,9 +203,12 @@
 				.title {
 					display: flex;
 					align-items: baseline;
+					font-size: 3rem;
+					color: var(--accent-color);
 
 					h2 {
-						margin-left: .2rem;
+						margin-left: 1rem;
+						font-size: 5rem;
 						color: var(--accent-color);
 					}
 				}
