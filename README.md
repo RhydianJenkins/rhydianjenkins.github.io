@@ -21,4 +21,3 @@ Finally, run it in dev mode.
 ```bash
 npm run dev -- --open
 ```
-

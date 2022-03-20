@@ -5,6 +5,11 @@
 	import { faCode, faUser } from '@fortawesome/free-solid-svg-icons';
 	import About from '$lib/About.svelte';
 	import Skills from '$lib/Skills.svelte';
+
+	const email = import.meta.env.VITE_EMAIL_ADDRESS || null;
+	const github = import.meta.env.VITE_GITHUB || null;
+	const cv = import.meta.env.VITE_CV || null;
+	const linkedin = import.meta.env.VITE_LINKEDIN || null;
 </script>
 
 <script>
@@ -50,10 +55,10 @@
 		<h1>Rhydian Jenkins</h1>
 		<h2>Full Stack Software Engineer</h2>
 		<ul>
-			<li><a href="mailto:rhydz@msn.com" target="blank">Email</a></li>
-			<li><a href="https://github.com/RhydianJenkins" target="blank">GitHub</a></li>
-			<li><a href="https://github.com/RhydianJenkins/CV/blob/master/cv.pdf" target="blank">CV</a></li>
-			<li><a href="https://www.linkedin.com/in/rhydian-jenkins-30309085" target="blank">LinkedIn</a></li>
+			{#if email}<li><a href="mailto:{ email }" target="blank">Email</a></li>{/if}
+			{#if github}<li><a href="{ github }" target="blank">GitHub</a></li>{/if}
+			{#if cv}<li><a href="{ cv }" target="blank">CV</a></li>{/if}
+			{#if linkedin}<li><a href="{ linkedin }" target="blank">LinkedIn</a></li>{/if}
 		</ul>
 	</div>
 </div>
@@ -92,7 +97,7 @@
 	</div>
 
 	<footer>
-		<p>🔧 Site currently in development 🔨</p>
+		<p class="text-center">Site currently in development</p>
 	</footer>
 </div>
 
