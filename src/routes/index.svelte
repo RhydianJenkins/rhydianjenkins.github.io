@@ -70,7 +70,7 @@
 				<About/>
 			</div>
 			<svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1416.99 174.01">
-				<path class="cls-1" d="M0,280.8S283.66,59,608.94,163.56s437.93,150.57,808,10.34V309.54H0V280.8Z" transform="translate(0-135.53)"/>
+				<path d="M0,280.8S283.66,59,608.94,163.56s437.93,150.57,808,10.34V309.54H0V280.8Z" transform="translate(0-135.53)"/>
 			</svg>
 		</section>
 
@@ -79,6 +79,9 @@
 				<div class="title"><Fa class="fa-code" icon={faCode}/><h2>Skills</h2></div>
 				<Skills/>
 			</div>
+			<svg class="curve opposite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path d="M0,64L48,80C96,96,192,128,288,154.7C384,181,480,203,576,213.3C672,224,768,224,864,192C960,160,1056,96,1152,64C1248,32,1344,32,1392,32L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+			</svg>
 		</section>
 	</div>
 
@@ -193,7 +196,7 @@
 
 		.page-body {
 			section {
-				$sectionPadding: 20rem;
+				$sectionPadding: 5rem;
 				padding-bottom: $sectionPadding;
 
 				&:not(:first-child) {
@@ -222,12 +225,14 @@
 					position: relative;
 					top: $sectionPadding;
 
-					&:nth-child(2n) {
-						background-color: var(--primary-color);
+					path {
+						fill: var(--background-opacity);
 					}
 
-					path{
-						fill: var(--background-opacity);
+					&.opposite {
+						path {
+							fill: var(--primary-color);
+						}
 					}
 				}
 			}
