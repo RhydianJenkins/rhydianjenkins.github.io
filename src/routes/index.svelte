@@ -2,8 +2,9 @@
 	export const prerender = true;
 
 	import Fa from 'svelte-fa';
-	import { faUser } from '@fortawesome/free-solid-svg-icons';
+	import { faCode, faUser } from '@fortawesome/free-solid-svg-icons';
 	import About from '$lib/About.svelte';
+	import Skills from '$lib/Skills.svelte';
 </script>
 
 <script>
@@ -67,6 +68,16 @@
 			<div class="container">
 				<div class="title"><Fa class="fa-user" icon={faUser}/><h2>About</h2></div>
 				<About/>
+			</div>
+			<svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1416.99 174.01">
+				<path class="cls-1" d="M0,280.8S283.66,59,608.94,163.56s437.93,150.57,808,10.34V309.54H0V280.8Z" transform="translate(0-135.53)"/>
+			</svg>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="title"><Fa class="fa-code" icon={faCode}/><h2>Skills</h2></div>
+				<Skills/>
 			</div>
 		</section>
 	</div>
@@ -182,7 +193,7 @@
 
 		.page-body {
 			section {
-				$sectionPadding: 40rem;
+				$sectionPadding: 20rem;
 				padding-bottom: $sectionPadding;
 
 				&:not(:first-child) {
@@ -204,6 +215,19 @@
 						margin-left: 1rem;
 						font-size: 5rem;
 						color: var(--accent-color);
+					}
+				}
+
+				.curve {
+					position: relative;
+					top: $sectionPadding;
+
+					&:nth-child(2n) {
+						background-color: var(--primary-color);
+					}
+
+					path{
+						fill: var(--background-opacity);
 					}
 				}
 			}
