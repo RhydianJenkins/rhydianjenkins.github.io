@@ -2,8 +2,7 @@
 	export const prerender = true;
 
 	import Fa from 'svelte-fa';
-	import { faCode, faUser } from '@fortawesome/free-solid-svg-icons';
-	import Skills from '$lib/Skills.svelte';
+	import { faUser } from '@fortawesome/free-solid-svg-icons';
 	import About from '$lib/About.svelte';
 </script>
 
@@ -70,13 +69,6 @@
 				<About/>
 			</div>
 		</section>
-
-		<!-- <section>
-			<div class="container">
-				<div class="title"><Fa class="fa-icon" icon={faCode}/><h2>Skills</h2></div>
-				<Skills/>
-			</div>
-		</section> -->
 	</div>
 
 	<footer>
