@@ -6,10 +6,10 @@
 	import About from '$lib/About.svelte';
 	import Skills from '$lib/Skills.svelte';
 
-	const email = import.meta.env.VITE_EMAIL_ADDRESS || null;
-	const github = import.meta.env.VITE_GITHUB || null;
-	const cv = import.meta.env.VITE_CV || null;
-	const linkedin = import.meta.env.VITE_LINKEDIN || null;
+	const email = import.meta.env.VITE_EMAIL_ADDRESS || "rhydz@msn.com";
+	const github = import.meta.env.VITE_GITHUB || "https://github.com/RhydianJenkins";
+	const cv = import.meta.env.VITE_CV || "https://github.com/RhydianJenkins/CV/blob/master/cv.pdf";
+	const linkedin = import.meta.env.VITE_LINKEDIN || "https://www.linkedin.com/in/rhydian-jenkins-30309085";
 </script>
 
 <script>
