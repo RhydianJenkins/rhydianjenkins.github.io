@@ -66,17 +66,24 @@
 
 <div class="waves">
 	{#each layers as layer}
-	<svg class="wave" style="{ waveStyles(layer) }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" shape-rendering="auto">
-		<linearGradient id="grad{layer}" x1="0%" y1="0%" x2="0" y2="100%">
-			<stop offset="0%" style="stop-color: {layerColors[layer]}; stop-opacity: 1" />
-			<stop offset="100%" style="stop-color: rgba(0, 0, 0, 0.5); stop-opacity: 1" />
-		</linearGradient>
-		{#if layer < layers.length - 1}
-			<path fill="url(#grad{layer})" d="{ layerPaths[layer] }" />
-		{:else}
-			<path fill="{ layerColors[layer] }" d="{ layerPaths[layer] }" />
-		{/if}
-	</svg>
+		<svg
+			class="wave"
+			style="{ waveStyles(layer) }"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			preserveAspectRatio="none"
+			shape-rendering="auto"
+		>
+			<linearGradient id="grad{layer}" x1="0%" y1="0%" x2="0" y2="100%">
+				<stop offset="0%" style="stop-color: {layerColors[layer]}; stop-opacity: 1" />
+				<stop offset="100%" style="stop-color: rgba(0, 0, 0, 0.1); stop-opacity: 1" />
+			</linearGradient>
+			{#if layer < layers.length - 1}
+				<path fill="url(#grad{layer})" d="{ layerPaths[layer] }" />
+			{:else}
+				<path fill="{ layerColors[layer] }" d="{ layerPaths[layer] }" />
+			{/if}
+		</svg>
 	{/each}
 
 	<div class="page-cover" style="{ waveStyles(layers.length) } height: min({y * 2}px, 110vh)"/>
