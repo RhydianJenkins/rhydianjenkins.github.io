@@ -34,6 +34,7 @@
             border-radius: 50%;
             border: 5px solid var(--secondary-color);
             object-fit: cover;
+            margin: 2rem;
         }
     }
 </style>
