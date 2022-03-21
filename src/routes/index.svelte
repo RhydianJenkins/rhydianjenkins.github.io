@@ -138,14 +138,14 @@
 			left: 0;
 			right: 0;
 			z-index: 1;
-			box-shadow: inset 0 0 500px 100px rgba(0, 0, 0, 0.5);
+			box-shadow: inset 0 0 50rem 20rem rgba(0, 0, 0, 0.5);
 		}
 
 		.splash-image {
 			position: fixed;
 			bottom: 0;
 			width: 100%;
-			height: 300%;
+			height: 250%;
 			object-fit: cover;
 
 			filter:
