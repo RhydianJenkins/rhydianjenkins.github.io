@@ -116,7 +116,7 @@
 		right: 0;
 		height: 100vh;
 		z-index: -1;
-		background-color: var(--tertiary-color);
+		background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
 
 		&::before {
 			content: '';
