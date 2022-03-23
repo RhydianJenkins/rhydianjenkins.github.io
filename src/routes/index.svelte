@@ -169,12 +169,12 @@
 			h1 {
 				color: var(--accent-color);
 				top: $top-title-gap;
-				font-size: 6rem;
+				font-size: min(10vw, 10rem);
 			}
 
 			h2 {
-				top: calc(#{$top-title-gap} + 16rem);
-				font-size: 4rem;
+				top: calc(#{$top-title-gap} + min(17rem, max(15vh, 5rem)));
+				font-size: min(6vw, 4rem);
 			}
 
 			ul {

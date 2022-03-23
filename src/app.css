@@ -15,9 +15,6 @@
 	--text-color: #edf0f8;
 	--text-color-secondary: #211F1F;
 	--background-opacity: rgba(255, 255, 255, 0.05);
-	--column-width: 62rem;
-	--column-margin-top: 4rem;
-	--border-radius: 5px;
 }
 
 body {
