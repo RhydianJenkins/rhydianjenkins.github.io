@@ -67,9 +67,8 @@
 			class="wave"
 			style="{ waveStyles(layer) }"
 			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 1440 320"
+			viewBox="0 0 1024 320"
 			preserveAspectRatio="none"
-			shape-rendering="auto"
 		>
 			<path fill="{ layerColors[layer] }" d="{ layerPaths[layer] }" />
 		</svg>
@@ -130,26 +129,7 @@
 			box-shadow: inset 0 0 50rem 20rem rgba(0, 0, 0, 0.15);
 		}
 
-		.splash-image {
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-			height: 250%;
-			object-fit: cover;
-			background-color: #E1FCFD;
-
-			filter:
-				blur(4px)
-				brightness(80%)
-				contrast(50%);
-		}
-
 		.splash {
-			&-wave {
-				position: fixed;
-				width: 100%;
-			}
-
 			h1,
 			h2,
 			ul {
