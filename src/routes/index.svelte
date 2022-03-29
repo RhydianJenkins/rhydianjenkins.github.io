@@ -141,9 +141,9 @@
 			}
 
 			h1 {
-				color: var(--accent-color);
+				color: var(--text-color);
 				top: $top-title-gap;
-				font-size: min(10vw, 10rem);
+				font-size: min(10vw, 15rem);
 			}
 
 			h2 {
