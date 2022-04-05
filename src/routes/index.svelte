@@ -89,6 +89,7 @@
 			</svg>
 		</section>
 
+		<!--
 		<section>
 			<div class="container">
 				<div class="title"><Fa class="fa-code" icon={faCode}/><h2>Skills</h2></div>
@@ -98,6 +99,7 @@
 				<path d="{ curvePaths[1] }"/>
 			</svg>
 		</section>
+		-->
 	</div>
 
 	<footer>
