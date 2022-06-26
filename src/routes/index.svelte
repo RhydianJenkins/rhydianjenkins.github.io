@@ -4,12 +4,11 @@
 	import Fa from 'svelte-fa';
 	import { faCode, faUser } from '@fortawesome/free-solid-svg-icons';
 	import About from '$lib/About.svelte';
-	import Skills from '$lib/Skills.svelte';
 
-	const email = import.meta.env.VITE_EMAIL_ADDRESS || "rhydz@msn.com";
-	const github = import.meta.env.VITE_GITHUB || "https://github.com/RhydianJenkins";
-	const cv = import.meta.env.VITE_CV || "https://github.com/RhydianJenkins/CV/blob/master/cv.pdf";
-	const linkedin = import.meta.env.VITE_LINKEDIN || "https://www.linkedin.com/in/rhydian-jenkins-30309085";
+	const email = "rhydz@msn.com";
+	const github = "https://github.com/RhydianJenkins";
+	const cv = "https://github.com/RhydianJenkins/CV/blob/master/cv.pdf";
+	const linkedin = "https://www.linkedin.com/in/rhydian-jenkins-30309085";
 </script>
 
 <script>
@@ -27,10 +26,6 @@
 		'M0,96L48,128C96,160,192,224,288,208C384,192,480,96,576,101.3C672,107,768,213,864,224C960,235,1056,149,1152,122.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z',
 		'M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z',
 		'M0,224L48,202.7C96,181,192,139,288,144C384,149,480,203,576,208C672,213,768,171,864,181.3C960,192,1056,256,1152,256C1248,256,1344,192,1392,160L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z',
-	];
-	const curvePaths = [
-		'M0,280.8S283.66,59,608.94,163.56s437.93,150.57,808,10.34V309.54H0V280.8Z',
-		'M0,64L48,80C96,96,192,128,288,154.7C384,181,480,203,576,213.3C672,224,768,224,864,192C960,160,1056,96,1152,64C1248,32,1344,32,1392,32L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z',
 	];
 
 	let y = 0;
@@ -231,21 +226,6 @@
 						margin-left: 1rem;
 						font-size: 5rem;
 						color: var(--accent-color);
-					}
-				}
-
-				.curve {
-					position: relative;
-					top: $sectionPadding;
-
-					path {
-						fill: var(--background-opacity);
-					}
-
-					&.opposite {
-						path {
-							fill: var(--primary-color);
-						}
 					}
 				}
 			}
