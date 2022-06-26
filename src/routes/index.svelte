@@ -84,22 +84,7 @@
 				<div class="title"><Fa class="fa-user" icon={faUser}/><h2>About</h2></div>
 				<About/>
 			</div>
-			<svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1416.99 174.01">
-				<path d="{ curvePaths[0] }" transform="translate(0-135.53)"/>
-			</svg>
 		</section>
-
-		<!--
-		<section>
-			<div class="container">
-				<div class="title"><Fa class="fa-code" icon={faCode}/><h2>Skills</h2></div>
-				<Skills/>
-			</div>
-			<svg class="curve opposite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path d="{ curvePaths[1] }"/>
-			</svg>
-		</section>
-		-->
 	</div>
 
 	<footer>
