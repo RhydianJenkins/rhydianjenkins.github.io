@@ -15,7 +15,7 @@
             <p class="text-center">
                 Passionate about learning, and familiar working in Windows and Linux environments,
                 Containers, Virtual Machines and shells. Strives for a principle first approach when learning,
-                combined with a passion to engage in anychallenge with a 'can-do' attitude.
+                combined with a passion to engage in any challenge with a 'can-do' attitude.
             </p>
         </div>
     </div>
