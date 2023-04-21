@@ -2,8 +2,9 @@
 	export const prerender = true;
 
 	import Fa from 'svelte-fa';
-	import { faCode, faUser } from '@fortawesome/free-solid-svg-icons';
+	import { faBriefcase, faUser } from '@fortawesome/free-solid-svg-icons';
 	import About from '$lib/About.svelte';
+	import Recruiters from '$lib/Recruiters.svelte';
 
 	const email = "rhydz@msn.com";
 	const github = "https://github.com/RhydianJenkins";
@@ -35,6 +36,13 @@
 		const offset = Math.min(y, maxOffset);
 		return `transform: translate(0, ${(layer * 20) + (-offset * layer / 5)}px);`
 	}
+
+    function scrollToRecruiters() {
+        const recruitersEl = document.querySelector('.recruiters');
+        if (!recruitersEl) return;
+
+        recruitersEl.scrollIntoView({ behavior: 'smooth' });
+    }
 </script>
 
 <svelte:head>
@@ -53,6 +61,9 @@
 			{#if cv}<li><a href="{ cv }" target="blank">CV</a></li>{/if}
 			{#if linkedin}<li><a href="{ linkedin }" target="blank">LinkedIn</a></li>{/if}
 		</ul>
+        <div class="button-wrapper">
+            <button on:click={scrollToRecruiters}>Recruiters click here!</button>
+        </div>
 	</div>
 </div>
 
@@ -80,11 +91,14 @@
 				<About/>
 			</div>
 		</section>
-	</div>
 
-	<footer>
-		<p class="text-center">Site currently in development</p>
-	</footer>
+		<section>
+			<div class="container">
+				<div class="title"><Fa class="fa-briefcase" icon={faBriefcase}/><h2>Are you a recruiter?</h2></div>
+				<Recruiters email={email}/>
+			</div>
+		</section>
+	</div>
 </div>
 
 <style lang="scss">
@@ -114,6 +128,7 @@
 		.splash {
 			h1,
 			h2,
+            .button-wrapper,
 			ul {
 				position: fixed;
 				width: 100%;
@@ -174,6 +189,42 @@
 					}
 				}
 			}
+
+            .button-wrapper {
+				top: calc(#{$top-title-gap} + 22rem);
+
+                button {
+                    padding: 1rem;
+                    margin: 1rem;
+                    color: var(--text-color);
+                    background-color: rgba(0, 0, 0, 0.2);
+                    border-radius: 0.5rem;
+                    border: 2px 2px 0 0 solid var(--text-color);
+                    position: relative;
+                    font-size: 2rem;
+
+					&:hover {
+						color: var(--accent-color);
+
+						&:before {
+							left: 0;
+                            margin: 0 auto;
+							width: 90%;
+						}
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 1px;
+						background-color: var(--accent-color);
+						bottom: calc(-1px);
+						right: 0;
+						transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+					}
+                }
+            }
 		}
 	}
 
@@ -229,14 +280,6 @@
 					}
 				}
 			}
-		}
-
-		footer {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding: 40px;
 		}
 	}
 </style>
